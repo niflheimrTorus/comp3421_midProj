@@ -6,20 +6,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Welcome to my page</title>
+    <!--
+    COMP3421 Mid-Term Assignment
+    Self-introduction website
+    By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
+    -->
 </head>
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/" target="_parent" style="color:lightgrey">Welcome to Victor's page!</a>
+            <a class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/" target="_parent"
+               style="color:lightgrey">Welcome to Victor's page!</a>
         </div>
-<!--        <ul class="nav navbar-nav">
-            <li class="active"><a>Homepage</a></li>
-        </ul>-->
     </div>
 </nav>
 
+<!-- Carousel photos taken by myself using carousel slide -->
 <div class="container" style="margin-top:80px">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
@@ -63,6 +67,7 @@
             </div>
         </div>
 
+        <!-- Left right button for previous photo and next photo -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
@@ -72,26 +77,31 @@
     </div>
 
     <h1>Self-introduction of Victor &#9804;</h1>
-        <div class="row">
-            <div class="col-md-3">
-                <img src="honmonoda.jpg" class="img-rounded" alt="selfPic" width="100%">
-            </div>
-            <div class="col-md-9">
-                <p style="font-size: larger">
-                    Hello! Welcome to my page hosted on GitHub. I am Victor from the Earth &#127758;.
-                    I'm living in Hong Kong and studying Information Security in HK PolyU because nowadays information security is so important!
-                    Also, I love listing Japanese songs &#127911;. One of the most favourite artists is called Aimer. Have you listened to her songs before?
-                    One of my favourite songs sung by Aimer is 六等星の夜 (Rokutouseino Yoru). You can <a href="#recommendedSong">click here</a> and jump to
-                    the bottom of the website. There is a official YouTube video of this song, please enjoy it.
-                    <br><br>
-                    This website is a self-introduction website and I use Bootstrap to create a self-introduction website.
-                    Thanks to the tutorials and documentation on the Internet, I found that writing a website using Bootstrap is really amazing and not difficult at all!
-                    I hope I will enjoy my coding road in the future.
-                    <br><br>
-                    &#128567; Under the pandemic, stay safe, stay healthy! &#128567;
-                </p>
-            </div>
+    <div class="row">
+        <!-- A 3-9 column on 1 row -->
+        <div class="col-md-3">
+            <img src="honmonoda.jpg" class="img-rounded" alt="selfPic" width="100%">
         </div>
+        <div class="col-md-9">
+            <p style="font-size: larger">
+                Hello! Welcome to my page hosted on GitHub. I am Victor from the Earth &#127758;.
+                I'm living in Hong Kong and studying Information Security in HK PolyU because nowadays information
+                security is so important!
+                Also, I love listing Japanese songs &#127911;. One of the most favourite artists is called Aimer. Have
+                you listened to her songs before?
+                One of my favourite songs sung by Aimer is 六等星の夜 (Rokutouseino Yoru). You can <a
+                    href="#recommendedSong">click here</a> and jump to
+                the bottom of the website. There is a official YouTube video of this song, please enjoy it.
+                <br><br>
+                This website is a self-introduction website and I use Bootstrap to create a self-introduction website.
+                Thanks to the tutorials and documentation on the Internet, I found that writing a website using
+                Bootstrap is really amazing and not difficult at all!
+                I hope I will enjoy my coding road in the future.
+                <br><br>
+                &#128567; Under the pandemic, stay safe, stay healthy! &#128567;
+            </p>
+        </div>
+    </div>
 
     <h2>My study path in my life...</h2>
     <p>My knowledge was enriched from these schools below!</p>
@@ -111,21 +121,27 @@
             <tr>
                 <td>2020 - Present</td>
                 <td>The Hong Kong Polytechnic University</td>
-                <td><a data-toggle="collapse" href="#infosec">Bachelor of Science (Hons) Degree in Information Security</a>
-                    <div id="infosec" class="collapse"><p>Learnt network security, cryptography, etc.</p></div></td>
+                <!-- Collapse tab on a link with brief description -->
+                <td><a data-toggle="collapse" href="#infosec">Bachelor of Science (Hons) Degree in Information
+                    Security</a>
+                    <div id="infosec" class="collapse"><p>Learnt network security, cryptography, etc.</p></div>
+                </td>
                 <td>YES!</td>
             </tr>
             <tr>
                 <td>2018 - 2020</td>
                 <td>The Hong Kong Institute of Vocational Education (Tsing Yi)</td>
+                <!-- Collapse tab on a link with brief description -->
                 <td><a data-toggle="collapse" href="#networking">Higher Diploma in Telecommunications and Networking</a>
-                    <div id="networking" class="collapse"><p>Learnt Cisco network skills, signalling fundamental, etc.</p></div>
+                    <div id="networking" class="collapse"><p>Learnt Cisco network skills, signalling fundamental,
+                        etc.</p></div>
                 </td>
                 <td>YES!</td>
             </tr>
             <tr>
                 <td>2012 - 2018</td>
                 <td>S.K.H. S.M.C. M.H.Y. College</td>
+                <!-- Collapse tab on a link with brief description -->
                 <td><a data-toggle="collapse" href="#dse">Is HKDSE a program...?</a> IDK...
                     <div id="dse" class="collapse"><p>Met lots of friends, and so much unforgettable memories.</p></div>
                 </td>
@@ -137,17 +153,18 @@
 
     </div>
 
-    <!-- YouTube Embedded Frame - Aimer -->
+    <!-- YouTube embedded frame - Aimer -->
     <div class="embed-responsive embed-responsive-16by9">
         <iframe class="col-md-6" id="recommendedSong" src="https://www.youtube-nocookie.com/embed/ahhig1IXA14"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
-
-<nav class="navbar-inverse" style="margin-top: 20px">
+<!-- Simple footer using navbar element -->
+<nav class="navbar-inverse" style="margin-top: 20px;">
     <div class="container-fluid">
-            <a class="navbar-brand"><p style="color: lightgrey; text-align: center;"></p></a>
+        <a class="navbar-brand" style="color: darkgrey; text-align: center;">&copy; Victor 20026535D. All right
+            reserved.</a>
     </div>
 </nav>
 
