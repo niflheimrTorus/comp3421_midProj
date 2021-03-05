@@ -39,15 +39,22 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
         }
 
         /* Detect dark mode */
-        .webColorMode {
+        .colorMode {
             background-color: #fff;
             color: #000;
         }
 
+        .detectMode:after {
+            content: "Dark mode disabled";
+        }
+
         @media (prefers-color-scheme: dark) {
-            .webColorMode {
+            .colorMode {
                 background-color: #333;
                 color: #eee;
+            }
+            .detectMode:after {
+                content: "Dark mode enabled";
             }
             a {
                 color: #f0ad4e;
@@ -56,13 +63,17 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
     </style>
 </head>
 
-<body class="webColorMode">
+<body class="colorMode">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/" target="_parent"
-               style="color:lightgrey">Welcome to Victor's page!</a>
+            <span class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/" target="_parent"
+               style="color:lightgrey">Welcome to Victor's page!</span>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="detectMode"></a></li>
+            </ul>
         </div>
+
     </div>
 </nav>
 
