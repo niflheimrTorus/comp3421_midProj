@@ -19,13 +19,26 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <span class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/" target="_parent"
-               style="color:lightgrey">Welcome to Victor's page!</span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barItem">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/"
+                  style="color:lightgrey">Welcome to Victor's page!</span>
+        </div>
+        <div class="collapse navbar-collapse" id="barItem">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#studyPath">My study path</a></li>
+                <li><a href="#recommendedSong">My favourite song</a></li>
+                <li><a href="#reference">Reference</a></li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a class="detectMode"></a></li>
             </ul>
         </div>
-
     </div>
 </nav>
 
@@ -82,9 +95,9 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
         </a>
     </div>
 
+    <!-- Self-intro with 2 col -->
     <h1>Self-introduction of Victor &#9804;</h1>
     <div class="row">
-        <!-- A 3-9 column on 1 row -->
         <div class="col-md-3">
             <img src="img/honmonoda.jpg" class="img-rounded shakePhoto" alt="selfPic" width="100%">
         </div>
@@ -99,19 +112,20 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
                     href="#recommendedSong" class="highlightElement">click here</a> and jump to
                 the bottom of the website. There is a official YouTube video of this song, please enjoy it.
                 <br><br>
-                This website is a self-introduction website and I use Bootstrap to create a self-introduction website.
+                This website is a self-introduction website used Bootstrap.
+                I included a carousel for the photos taken by myself, a study path table with collapse function, shaking
+                my photo, and dark mode on the website.
                 Thanks to the tutorials and documentation on the Internet, I found that writing a website using
                 Bootstrap is really amazing and not difficult at all!
-                Therefore, I included a carousel for the photos taken by myself, a study path table with collapse
-                function, and
+
                 I hope I will enjoy my coding road in the future.
                 <br><br>
-                &#128567; Under the pandemic, stay safe, stay healthy! &#128567;
+                Under the COVID-19 pandemic, stay safe, stay healthy! &#128567;
             </p>
         </div>
     </div>
 
-    <h2>My study path in my life...</h2>
+    <h2 id="studyPath">My study path in my life...</h2>
     <p>My knowledge was enriched from these schools below!</p>
 
     <!-- Responsive table of my study life -->
@@ -160,12 +174,25 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
     </div>
 
     <!-- YouTube embedded frame - Aimer -->
+
+    <h2 id="recommendedSong">Aimer - 六等星の夜</h2>
     <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="col-md-6" id="recommendedSong" src="https://www.youtube-nocookie.com/embed/ahhig1IXA14"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item"
+                src="https://www.youtube-nocookie.com/embed/ahhig1IXA14"
+                allowfullscreen>
+        </iframe>
     </div>
+
+
+    <!-- Reference link -->
+    <h2 id="reference">Reference</h2>
+    <div class="row">
+        <a href="https://www.w3schools.com/bootstrap/default.asp">W3School - Bootstrap</a><br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">Mozilla - Prefers color scheme</a>
+    </div>
+
 </div>
+
 
 <!-- Simple footer using navbar element -->
 <nav class="navbar-inverse" style="margin-top: 20px;">
