@@ -1,16 +1,69 @@
+<!--
+COMP3421 Mid-Term Assignment
+Self-introduction website
+By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Bootstrap 3.4.1 downloaded -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Welcome to my page</title>
-    <!--
-    COMP3421 Mid-Term Assignment
-    Self-introduction website
-    By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
-    -->
+    <style>
+        .carousel-caption {
+            text-shadow: 4px 4px 8px #000;
+            font-size: 20px;
+        }
+        .shakePhoto:hover {
+            animation: myPicture 0.5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myPicture {
+            0% {
+                transform: translate(1px, 1px) rotate(1deg);
+            }
+            10% {
+                transform: translate(-1px, -1px) rotate(-1deg);
+            }
+            20% {
+                transform: translate(-2px, -9px) rotate(0deg);
+            }
+            30% {
+                transform: translate(-3px, -8px) rotate(1deg);
+            }
+            40% {
+                transform: translate(-4px, -7px) rotate(0deg);
+            }
+            50% {
+                transform: translate(-5px, -6px) rotate(-1deg);
+            }
+            60% {
+                transform: translate(-6px, -5px) rotate(0deg);
+            }
+            70% {
+                transform: translate(-7px, -4px) rotate(1deg);
+            }
+            80% {
+                transform: translate(-8px, -3px) rotate(0deg);
+            }
+            90% {
+                transform: translate(-9px, -2px) rotate(-1deg);
+            }
+            100% {
+                transform: translate(-1px, -1px) rotate(0deg);
+            }
+        }
+        .rotateLeo {
+            animation: rotation 1s infinite linear;
+        }
+        @keyframes rotateLeo {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(359deg); }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +76,7 @@
     </div>
 </nav>
 
-<!-- Carousel photos taken by myself using carousel slide -->
+<!-- Carousel with photos taken by myself using carousel slide -->
 <div class="container" style="margin-top:80px">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
@@ -36,33 +89,33 @@
 
         <div class="carousel-inner">
             <div class="item active">
-                <img src="gardenHill.jpg" alt="Garden Hill" style="width:100%;">
+                <img src="img/gardenHill.jpg" alt="Garden Hill" style="width:100%;">
                 <div class="carousel-caption">
-                    <h4 style="text-shadow: 2px 2px 5px black">Garden Hill &#127748;</h4>
+                    <h4>Garden Hill &#127748;</h4>
                 </div>
             </div>
             <div class="item">
-                <img src="thePeak.jpg" alt="The Victoria Harbour" style="width:100%;">
+                <img src="img/thePeak.jpg" alt="The Victoria Harbour" style="width:100%;">
                 <div class="carousel-caption">
-                    <h4 style="text-shadow: 2px 2px 5px black">The Victoria Harbour</h4>
+                    <h4>The Victoria Harbour</h4>
                 </div>
             </div>
             <div class="item">
-                <img src="goodDish.jpg" alt="Somewhere" style="width:100%;">
+                <img src="img/goodDish.jpg" alt="Somewhere" style="width:100%;">
                 <div class="carousel-caption">
-                    <h4 style="text-shadow: 2px 2px 5px black">Very delicious &#129316;</h4>
+                    <h4>Very delicious &#129316;</h4>
                 </div>
             </div>
             <div class="item">
-                <img src="views.jpg" alt="Somewhere" style="width:100%;">
+                <img src="img/views.jpg" alt="Somewhere" style="width:100%;">
                 <div class="carousel-caption">
-                    <h4 style="text-shadow: 2px 2px 5px black">Hum... Nice weather! &#127774;</h4>
+                    <h4>Hum... Nice weather! &#127774;</h4>
                 </div>
             </div>
             <div class="item">
-                <img src="goodNight.jpg" alt="Somewhere" style="width:100%;">
+                <img src="img/goodNight.jpg" alt="Somewhere" style="width:100%;">
                 <div class="carousel-caption">
-                    <h4 style="text-shadow: 2px 2px 5px black">The night view is not bad &#127771;</h4>
+                    <h4>The night view is not bad &#127771;</h4>
                 </div>
             </div>
         </div>
@@ -80,7 +133,7 @@
     <div class="row">
         <!-- A 3-9 column on 1 row -->
         <div class="col-md-3">
-            <img src="honmonoda.jpg" class="img-rounded" alt="selfPic" width="100%">
+            <img src="img/honmonoda.jpg" class="img-rounded shakePhoto" alt="selfPic" width="100%">
         </div>
         <div class="col-md-9">
             <p style="font-size: larger">
@@ -90,12 +143,14 @@
                 Also, I love listing Japanese songs &#127911;. One of the most favourite artists is called Aimer. Have
                 you listened to her songs before?
                 One of my favourite songs sung by Aimer is 六等星の夜 (Rokutouseino Yoru). You can <a
-                    href="#recommendedSong">click here</a> and jump to
+                    href="#recommendedSong" class="highlightElement">click here</a> and jump to
                 the bottom of the website. There is a official YouTube video of this song, please enjoy it.
                 <br><br>
                 This website is a self-introduction website and I use Bootstrap to create a self-introduction website.
                 Thanks to the tutorials and documentation on the Internet, I found that writing a website using
                 Bootstrap is really amazing and not difficult at all!
+                Therefore, I included a carousel for the photos taken by myself, a study path table with collapse
+                function, and
                 I hope I will enjoy my coding road in the future.
                 <br><br>
                 &#128567; Under the pandemic, stay safe, stay healthy! &#128567;
@@ -162,7 +217,7 @@
 <!-- Simple footer using navbar element -->
 <nav class="navbar-inverse" style="margin-top: 20px;">
     <div class="container-fluid">
-        <a class="navbar-brand" style="color: darkgrey; text-align: center;">&copy; Victor 20026535D. All right
+        <a class="navbar-brand" style="color: darkgrey;">&copy; Victor 20026535D. All right
             reserved.</a>
     </div>
 </nav>
