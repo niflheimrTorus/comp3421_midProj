@@ -6,67 +6,57 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Bootstrap 3.4.1 downloaded -->
+    <!-- Bootstrap 3.4.1 linked to Bootstrap CDN -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Welcome to my page</title>
     <style>
+        /* Text for carousel */
         .carousel-caption {
             text-shadow: 4px 4px 8px #000;
             font-size: 20px;
         }
+
+        /* Shake my face when mouse cursor hover the pics */
         .shakePhoto:hover {
             animation: myPicture 0.5s;
             animation-iteration-count: infinite;
         }
         @keyframes myPicture {
-            0% {
-                transform: translate(1px, 1px) rotate(1deg);
-            }
-            10% {
-                transform: translate(-1px, -1px) rotate(-1deg);
-            }
-            20% {
-                transform: translate(-2px, -9px) rotate(0deg);
-            }
-            30% {
-                transform: translate(-3px, -8px) rotate(1deg);
-            }
-            40% {
-                transform: translate(-4px, -7px) rotate(0deg);
-            }
-            50% {
-                transform: translate(-5px, -6px) rotate(-1deg);
-            }
-            60% {
-                transform: translate(-6px, -5px) rotate(0deg);
-            }
-            70% {
-                transform: translate(-7px, -4px) rotate(1deg);
-            }
-            80% {
-                transform: translate(-8px, -3px) rotate(0deg);
-            }
-            90% {
-                transform: translate(-9px, -2px) rotate(-1deg);
-            }
-            100% {
-                transform: translate(-1px, -1px) rotate(0deg);
-            }
+            0% { transform: translate(1px, 1px) rotate(1deg); }
+            10% { transform: translate(-1px, -1px) rotate(-1deg); }
+            20% { transform: translate(0px, 0px) rotate(0deg); }
+            30% { transform: translate(-2px, -2px) rotate(1deg); }
+            40% { transform: translate(0px, 0px) rotate(0deg); }
+            50% { transform: translate(2px, 2px) rotate(-1deg); }
+            60% { transform: translate(1px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 2px) rotate(1deg); }
+            80% { transform: translate(2px, 3px) rotate(0deg); }
+            90% { transform: translate(0px, 0px) rotate(-1deg); }
+            100% { transform: translate(1x, 1px) rotate(0deg); }
         }
-        .rotateLeo {
-            animation: rotation 1s infinite linear;
+
+        /* Detect dark mode */
+        .webColorMode {
+            background-color: #fff;
+            color: #000;
         }
-        @keyframes rotateLeo {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(359deg); }
+
+        @media (prefers-color-scheme: dark) {
+            .webColorMode {
+                background-color: #333;
+                color: #eee;
+            }
+            a {
+                color: #f0ad4e;
+            }
         }
     </style>
 </head>
 
-<body>
+<body class="webColorMode">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -209,7 +199,7 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
     <!-- YouTube embedded frame - Aimer -->
     <div class="embed-responsive embed-responsive-16by9">
         <iframe class="col-md-6" id="recommendedSong" src="https://www.youtube-nocookie.com/embed/ahhig1IXA14"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
