@@ -14,18 +14,41 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
     animation: myPicture 0.5s;
     animation-iteration-count: infinite;
 }
+
 @keyframes myPicture {
-    0% { transform: translate(1px, 1px) rotate(1deg); }
-    10% { transform: translate(-1px, -1px) rotate(-1deg); }
-    20% { transform: translate(0px, 0px) rotate(0deg); }
-    30% { transform: translate(-2px, -2px) rotate(1deg); }
-    40% { transform: translate(0px, 0px) rotate(0deg); }
-    50% { transform: translate(2px, 2px) rotate(-1deg); }
-    60% { transform: translate(1px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 2px) rotate(1deg); }
-    80% { transform: translate(2px, 3px) rotate(0deg); }
-    90% { transform: translate(0px, 0px) rotate(-1deg); }
-    100% { transform: translate(1px, 1px) rotate(0deg); }
+    0% {
+        transform: translate(1px, 1px) rotate(1deg);
+    }
+    10% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    30% {
+        transform: translate(-2px, -2px) rotate(1deg);
+    }
+    40% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(2px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 2px) rotate(1deg);
+    }
+    80% {
+        transform: translate(2px, 3px) rotate(0deg);
+    }
+    90% {
+        transform: translate(0px, 0px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
 }
 
 /* Detect dark mode */
@@ -43,29 +66,37 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
         background-color: #333;
         color: #eee;
     }
+
     .detectMode:after {
         content: "Dark mode enabled";
     }
+
     a {
         color: #f0ad4e;
     }
 }
 
 /* Fix navbar cover content on link*/
-h2::before{
+h2::before {
     display: block;
     content: " ";
     margin-top: -55px;
     height: 55px;
     visibility: hidden;
 }
-h1::before{
-     display: block;
-     content: " ";
-     margin-top: -60px;
-     height: 60px;
-     visibility: hidden;
- }
-p {
+
+h1::before {
+    display: block;
+    content: " ";
+    margin-top: -60px;
+    height: 60px;
+    visibility: hidden;
+}
+
+h2 + p {
+    font-size: larger;
+}
+
+p + ul {
     font-size: larger;
 }
