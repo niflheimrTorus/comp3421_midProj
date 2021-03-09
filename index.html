@@ -11,11 +11,11 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="src/customeStyle.css">
+    <link rel="stylesheet" href="src/customStyle.css">
     <title>Welcome to my page</title>
 </head>
 
-<body class="colorMode">
+<body class="colorMode" data-spy="scroll" id="toppage">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -28,9 +28,11 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
             <span class="navbar-brand" href="https://niflheimrtorus.github.io/comp3421_midProj/"
                   style="color:lightgrey">Welcome to Victor's page!</span>
         </div>
+
         <div class="collapse navbar-collapse" id="barItem">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#toppage">Top-page</a></li>
+                <li><a href="#intro">Self-intro</a></li>
                 <li><a href="#studyPath">My study path</a></li>
                 <li><a href="#recommendedSong">My favourite song</a></li>
                 <li><a href="#reference">Reference</a></li>
@@ -96,13 +98,13 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
     </div>
 
     <!-- Self-intro with 2 col -->
-    <h1>Self-introduction of Victor &#9804;</h1>
+    <h1 id="intro">Self-introduction of Victor &#9804;</h1>
     <div class="row">
         <div class="col-md-3">
             <img src="img/honmonoda.jpg" class="img-rounded shakePhoto" alt="selfPic" width="100%">
         </div>
         <div class="col-md-9">
-            <p style="font-size: larger">
+            <p>
                 Hello! Welcome to my page hosted on GitHub. I am Victor from the Earth &#127758;.
                 I'm living in Hong Kong and studying Information Security in HK PolyU because nowadays information
                 security is so important!
@@ -169,13 +171,21 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
                 </td>
                 <td>Half-half</td>
             </tr>
+            <tr>
+                <td>Before 2012</td>
+                <td>###### Secret ######</td>
+                <!-- Collapse tab on a link with brief description -->
+                <td><a data-toggle="collapse" href="#secret">###### Secret ######</a>
+                    <div id="secret" class="collapse"><p>$RF(*&T@WS$%^T</p></div>
+                </td>
+                <td>###### Secret ######</td>
+            </tr>
             </tbody>
         </table>
     </div>
 
     <!-- YouTube embedded frame - Aimer -->
-
-    <h2 id="recommendedSong">Aimer - 六等星の夜</h2>
+    <h2 id="recommendedSong">My favourite song: 六等星の夜 (Rokutouseino Yoru) by Aimer</h2>
     <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item"
                 src="https://www.youtube-nocookie.com/embed/ahhig1IXA14"
@@ -183,16 +193,21 @@ By LI Shing Hin, Victor 20026535D, BSc (Hons) Information Security
         </iframe>
     </div>
 
-
     <!-- Reference link -->
     <h2 id="reference">Reference</h2>
-    <div class="row">
-        <a href="https://www.w3schools.com/bootstrap/default.asp">W3School - Bootstrap</a><br>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">Mozilla - Prefers color scheme</a>
-    </div>
+    <p>The resources I used in this page.</p>
+    <ul class="">
+        <li>Coffee</li>
+        <li>Tea
+            <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+            </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
 
 </div>
-
 
 <!-- Simple footer using navbar element -->
 <nav class="navbar-inverse" style="margin-top: 20px;">
